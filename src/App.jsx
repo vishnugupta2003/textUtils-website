@@ -4,7 +4,7 @@ import About from './about.jsx';
 import React, { useState } from 'react';
 import Alert from './alert.jsx';
 import TextForm from './TextForm.jsx';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const [mode, setMode] = useState('light');
@@ -54,7 +54,7 @@ const App = () => {
       <Router>
         <Navbar
           title='TextConverter'
-          aboutTest='About TextConverter'
+          aboutTest='AboutTextConverter'
           mode={mode}
           toggleMode={toggleMode}
           showAlert={showAlert}
@@ -71,21 +71,23 @@ const App = () => {
 
         {/* <About mode={mode} /> */}
         <div className='container my-3'>
-          <Switch>
+          <Routes>
             {/* react always do partial matching that means this always show component 1 if you go exact component so use exact keyword before path */}
             {/* '/user'--> component 1
             '/user/home' --> component 2 */}
-            <Route exact path='/about'>
-              <About mode={mode} />
-            </Route>
-            <Route exact path='/'>
-              <TextForm
-                showAlert={showAlert}
-                heading=' Try textConverter for convert text in upperCase, lowerCase, Remove Extra space'
-                mode={mode}
-              />
-            </Route>
-          </Switch>
+            <Route exact path='/about' element={<About mode={mode} />}></Route>
+            <Route
+              exact
+              path='/'
+              element={
+                <TextForm
+                  showAlert={showAlert}
+                  heading=' Try textConverter for convert text in upperCase, lowerCase, Remove Extra space'
+                  mode={mode}
+                />
+              }
+            ></Route>
+          </Routes>
         </div>
       </Router>
     </>
