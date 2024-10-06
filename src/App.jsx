@@ -87,7 +87,7 @@ const App = () => {
                 />
               }
             ></Route>
-            <Route exact path='/textUtils-website/' Component={Front}></Route>
+            {/* <Route exact path='/textUtils-website/' Component={Front}></Route> */}
           </Routes>
         </div>
       </Router>
