@@ -51,7 +51,7 @@ const App = () => {
   };
   // Switch not use Es6 version in Es6 use Routes insted of Switch if you want to use Switch so install react router dom version 5.
   return (
-    <>
+    <div>
       <Router>
         <Navbar
           title='TextConverter'
@@ -70,7 +70,7 @@ const App = () => {
       </div> */}
 
         {/* <About mode={mode} /> */}
-        <div className='container my-3'>
+        <div className='container my-3' style={{ height: '80vh' }}>
           <Routes>
             {/* react always do partial matching that means this always show component 1 if you go exact component so use exact keyword before path */}
             {/* '/user'--> component 1
@@ -87,11 +87,11 @@ const App = () => {
                 />
               }
             ></Route>
-            <Route exact path='/TextUtlis-website' Component={Front}></Route>
+            <Route exact path='/textUtils-website/' Component={Front}></Route>
           </Routes>
         </div>
       </Router>
-    </>
+    </div>
   );
 };
 export default App;
