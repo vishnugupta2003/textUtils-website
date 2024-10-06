@@ -57,7 +57,6 @@ const App = () => {
           aboutTest='AboutTextConverter'
           mode={mode}
           toggleMode={toggleMode}
-          showAlert={showAlert}
         />
         <Alert alert={alert} />
         {/* <Navbar title = "Techsimplus"   /> */}

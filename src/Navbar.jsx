@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// export default function Navbar(props){
 const Navbar = (props) => {
   return (
     <>
@@ -36,7 +35,7 @@ const Navbar = (props) => {
                 </Link>
               </li>
             </ul>
-            <form className='d-flex' role='search'>
+            <div className='d-flex' role='search'>
               {/* <div className='d-flex'>
                 <button
                   className='bg-primary rounded mx-2'
@@ -101,7 +100,7 @@ const Navbar = (props) => {
                   Enable dark mode
                 </label>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </nav>
