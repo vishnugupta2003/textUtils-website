@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Alert from './alert.jsx';
 import TextForm from './TextForm.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Front from './front.jsx';
 
 const App = () => {
   const [mode, setMode] = useState('light');
@@ -86,6 +87,7 @@ const App = () => {
                 />
               }
             ></Route>
+            <Route exact path='/TextUtlis-website' Component={Front}></Route>
           </Routes>
         </div>
       </Router>
