@@ -54,7 +54,7 @@ const App = () => {
     <div>
       <Router>
         <Navbar
-          title='TextConverter'
+          title='TextUtils'
           aboutTest='AboutTextConverter'
           mode={mode}
           toggleMode={toggleMode}
@@ -75,10 +75,9 @@ const App = () => {
             {/* react always do partial matching that means this always show component 1 if you go exact component so use exact keyword before path */}
             {/* '/user'--> component 1
             '/user/home' --> component 2 */}
-            <Route exact path='/about' element={<About mode={mode} />}></Route>
+            <Route path='/about' element={<About mode={mode} />}></Route>
             <Route
-              exact
-              path='/'
+              path='/textConverter'
               element={
                 <TextForm
                   showAlert={showAlert}
@@ -87,7 +86,7 @@ const App = () => {
                 />
               }
             ></Route>
-            <Route exact path='/textUtils-website/' Component={Front}></Route>
+            <Route path='/' Component={Front}></Route>
           </Routes>
         </div>
       </Router>
