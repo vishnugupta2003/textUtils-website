@@ -120,6 +120,6 @@ Navbar.propTypes = {
 Navbar.defaultProps = {
   // default title when are you not giving props then these execute
   title: ' Title ',
-  // aboutTest: 'About',
+  aboutTest: 'About',
 };
 export default Navbar;
