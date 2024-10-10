@@ -6,6 +6,7 @@ import Alert from './alert.jsx';
 import TextForm from './TextForm.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Front from './front.jsx';
+import NotFoundComponent from './notFoundComponent.jsx';
 
 const App = () => {
   const [mode, setMode] = useState('light');
@@ -89,7 +90,8 @@ const App = () => {
                 />
               }
             ></Route>
-            <Route path='/' Component={Front}></Route>
+            <Route exact path='/' Component={Front}></Route>
+            <Route Component={NotFoundComponent}></Route>
           </Routes>
         </div>
       </Router>
