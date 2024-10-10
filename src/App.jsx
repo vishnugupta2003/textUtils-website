@@ -89,7 +89,7 @@ const App = () => {
                 />
               }
             ></Route>
-            <Route path='/textUtils-website/' Component={Front}></Route>
+            <Route path='/' Component={Front}></Route>
           </Routes>
         </div>
       </Router>
