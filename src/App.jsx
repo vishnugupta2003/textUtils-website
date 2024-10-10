@@ -75,9 +75,12 @@ const App = () => {
             {/* react always do partial matching that means this always show component 1 if you go exact component so use exact keyword before path */}
             {/* '/user'--> component 1
             '/user/home' --> component 2 */}
-            <Route path='/about' element={<About mode={mode} />}></Route>
             <Route
-              path='/textConverter'
+              path='/textUtils-website/about'
+              element={<About mode={mode} />}
+            ></Route>
+            <Route
+              path='/textUtils-website/textConverter'
               element={
                 <TextForm
                   showAlert={showAlert}

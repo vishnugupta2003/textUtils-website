@@ -28,13 +28,13 @@ const Navbar = (props) => {
                 <Link
                   className='nav-link active'
                   aria-current='page'
-                  to='/textConverter'
+                  to='/textUtils-website/textConverter'
                 >
                   TextConverter
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/about'>
+                <Link className='nav-link' to='/textUtils-website/about'>
                   {props.aboutTest}
                 </Link>
               </li>
